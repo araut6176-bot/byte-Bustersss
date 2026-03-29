@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath | Find Your Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <section id="home-page" class="active">
+            <h1>Find Your Dream Career</h1>
+            <p>Answer a few questions and discover the perfect job path for you.</p>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <section id="quiz-page" class="hidden">
+            <div id="quiz-container">
+                <h2 id="question-text">Question goes here?</h2>
+                <div class="options">
+                    <button class="btn-opt" onclick="handleAnswer('yes')">Yes</button>
+                    <button class="btn-opt" onclick="handleAnswer('no')">No</button>
+                </div>
+                <p class="progress">Question <span id="q-number">1</span> of 4</p>
+            </div>
+        </section>
+
+        <section id="result-page" class="hidden">
+            <h2 id="career-title">Your Career Match</h2>
+            <div class="result-card">
+                <h3>Recommended Skills:</h3>
+                <ul id="skills-list"></ul>
+            </div>
+            
+            <div class="jobs-section">
+                <h3>Matching Job Openings:</h3>
+                <div id="job-list" class="job-grid"></div>
+            </div>
+
+            <button class="btn secondary" onclick="location.reload()">Restart Quiz</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
